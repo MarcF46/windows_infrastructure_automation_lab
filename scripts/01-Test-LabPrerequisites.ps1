@@ -1,7 +1,7 @@
 #Requires -Version 7.0
 #Requires -RunAsAdministrator
 
-<#+
+<#
 .SYNOPSIS
     Validates the local host before the Windows infrastructure lab is deployed.
 
