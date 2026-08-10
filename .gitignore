@@ -1,0 +1,35 @@
+# Local configuration and secrets
+config/lab.psd1
+*.secret.psd1
+*.credentials.psd1
+.env
+.env.*
+
+# Logs and generated reports
+logs/*
+!logs/.gitkeep
+reports/*
+!reports/.gitkeep
+*.log
+*.transcript.txt
+
+# Local lab artifacts
+LabSources/
+ISOs/
+*.iso
+*.vhd
+*.vhdx
+*.avhdx
+*.vmcx
+*.vmrs
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# PowerShell temporary files
+*.tmp
+*.bak
