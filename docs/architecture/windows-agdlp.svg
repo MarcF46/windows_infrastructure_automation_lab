@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
+  <title id="title">AGDLP-Berechtigungsmodell</title>
+  <desc id="desc">Benutzerkonto wird über globale Rollengruppe und domänenlokale Ressourcengruppe auf SMB- und NTFS-Berechtigungen abgebildet.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b6fdc"/>
+    </marker>
+    <style>
+      .bg{fill:#ffffff}
+      .box{fill:#ffffff;stroke:#dce5ef;stroke-width:2}
+      .accent{fill:#edf5ff;stroke:#0b6fdc;stroke-width:2}
+      .dark{fill:#142033}
+      .muted{fill:#607087}
+      .line{stroke:#0b6fdc;stroke-width:3;fill:none;marker-end:url(#arrow)}
+      .line-dashed{stroke:#0b6fdc;stroke-width:2.5;fill:none;stroke-dasharray:8 7;marker-end:url(#arrow)}
+      .title{font:700 30px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#142033}
+      .h{font:700 22px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#142033}
+      .t{font:500 17px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#607087}
+      .s{font:600 15px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#607087}
+      .label{font:700 15px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#0b6fdc}
+    </style>
+  </defs>
+  <rect class="bg" width="100%" height="100%"/>
+
+  <text class="title" x="60" y="55">AGDLP-Berechtigungsmodell</text>
+  <text class="t" x="60" y="85">Rollen und Ressourcen bleiben getrennt und nachvollziehbar.</text>
+
+  <rect class="box" x="55" y="145" rx="18" ry="18" width="230" height="105"/>
+  <text class="h" x="105" y="188">Benutzer</text>
+  <text class="t" x="86" y="220">Benutzerkonto</text>
+
+  <rect class="accent" x="345" y="145" rx="18" ry="18" width="250" height="105"/>
+  <text class="h" x="382" y="188">Globale Gruppe</text>
+  <text class="t" x="387" y="220">Rolle / Abteilung</text>
+
+  <rect class="accent" x="655" y="145" rx="18" ry="18" width="250" height="105"/>
+  <text class="h" x="688" y="188">Lokale Gruppe</text>
+  <text class="t" x="676" y="220">Ressourcenbezug</text>
+
+  <rect class="box" x="965" y="145" rx="18" ry="18" width="180" height="105"/>
+  <text class="h" x="1002" y="188">ACL</text>
+  <text class="t" x="992" y="220">SMB · NTFS</text>
+
+  <path class="line" d="M285 198 H345"/>
+  <path class="line" d="M595 198 H655"/>
+  <path class="line" d="M905 198 H965"/>
+</svg>
