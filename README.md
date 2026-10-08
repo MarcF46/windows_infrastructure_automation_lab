@@ -22,24 +22,9 @@ Dabei geht es nicht nur darum, virtuelle Maschinen zu starten. Die einzelnen Sch
 
 ## Architektur
 
-```mermaid
-flowchart TB
-    Internet((Internet))
-    Host[Hyper-V Host<br/>Windows 11 Pro]
-    Switch[Interner Hyper-V-Switch<br/>WindowsInfraLab]
-    DC[DC01<br/>Windows Server 2022<br/>AD DS + DNS]
-    SRV[SRV01<br/>Windows Server 2022<br/>Dateiserver + DHCP]
-    CL[CL01<br/>Windows 11 Enterprise<br/>Domänenclient]
+![Architekturdiagramm der Windows-Infrastruktur](docs/architecture/windows-infrastructure.svg)
 
-    Internet -->|NAT über Host| Host
-    Host --> Switch
-    Switch --> DC
-    Switch --> SRV
-    Switch --> CL
-
-    DC -. corp.example .- SRV
-    DC -. corp.example .- CL
-```
+Die Grafik zeigt den Hyper-V-Host, das interne virtuelle Netzwerk sowie DC01, SRV01 und CL01 als zusammenhängende Lab-Infrastruktur. Der Internetzugang erfolgt kontrolliert über NAT auf dem Host.
 
 ### Beispieladressierung
 
