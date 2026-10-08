@@ -4,22 +4,7 @@
 
 Das Lab stellt eine kleine, klar getrennte Windows-Infrastruktur auf einem einzelnen Hyper-V-Host bereit. Die Umgebung besteht aus drei virtuellen Maschinen und einem internen virtuellen Netzwerk.
 
-```mermaid
-flowchart LR
-    Host[Hyper-V Host]
-    Nat[NAT]
-    Switch[Interner Switch]
-    DC[DC01<br/>AD DS + DNS]
-    SRV[SRV01<br/>SMB + DHCP]
-    CL[CL01<br/>Windows Client]
-
-    Host --> Nat
-    Host --> Switch
-    Switch --> DC
-    Switch --> SRV
-    Switch --> CL
-    Nat --> Internet((Internet))
-```
+![Zielarchitektur des Windows-Labs](architecture/windows-infrastructure.svg)
 
 ## Rollen
 
@@ -72,15 +57,7 @@ Der virtuelle Switch ist intern. Der Hyper-V-Host stellt über Windows NAT den �
 
 Das Dateiberechtigungsmodell folgt AGDLP:
 
-```mermaid
-flowchart LR
-    U[Benutzerkonto]
-    GG[Globale Rollengruppe]
-    DL[Domänenlokale Ressourcengruppe]
-    ACL[SMB- und NTFS-Berechtigung]
-
-    U --> GG --> DL --> ACL
-```
+![AGDLP-Berechtigungsmodell](architecture/windows-agdlp.svg)
 
 Damit werden Benutzer nicht direkt auf Dateiordner berechtigt. Rollen und Ressourcen bleiben getrennt und nachvollziehbar.
 
