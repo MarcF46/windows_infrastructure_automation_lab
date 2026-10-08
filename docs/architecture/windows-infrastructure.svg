@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+  <title id="title">Windows-Infrastruktur-Automatisierung</title>
+  <desc id="desc">Hyper-V Host mit internem Switch, Domain Controller, Datei- und DHCP-Server, Windows-Client und NAT-Zugang zum Internet.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b6fdc"/>
+    </marker>
+    <style>
+      .bg{fill:#ffffff}
+      .box{fill:#ffffff;stroke:#dce5ef;stroke-width:2}
+      .accent{fill:#edf5ff;stroke:#0b6fdc;stroke-width:2}
+      .dark{fill:#142033}
+      .muted{fill:#607087}
+      .line{stroke:#0b6fdc;stroke-width:3;fill:none;marker-end:url(#arrow)}
+      .line-dashed{stroke:#0b6fdc;stroke-width:2.5;fill:none;stroke-dasharray:8 7;marker-end:url(#arrow)}
+      .title{font:700 30px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#142033}
+      .h{font:700 22px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#142033}
+      .t{font:500 17px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#607087}
+      .s{font:600 15px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#607087}
+      .label{font:700 15px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#0b6fdc}
+    </style>
+  </defs>
+  <rect class="bg" width="100%" height="100%"/>
+
+  <text class="title" x="60" y="58">Windows-Infrastruktur-Automatisierung</text>
+  <text class="t" x="60" y="88">Reproduzierbare Drei-VM-Umgebung auf Hyper-V</text>
+
+  <rect class="accent" x="70" y="140" rx="18" ry="18" width="260" height="115"/>
+  <text class="h" x="105" y="182">Hyper-V Host</text>
+  <text class="t" x="105" y="212">Windows 11 Pro</text>
+  <text class="s" x="105" y="237">AutomatedLab · PowerShell</text>
+
+  <rect class="box" x="430" y="140" rx="18" ry="18" width="260" height="115"/>
+  <text class="h" x="493" y="182">Internet</text>
+  <text class="t" x="474" y="212">Zugang über NAT</text>
+
+  <rect class="accent" x="430" y="320" rx="18" ry="18" width="300" height="100"/>
+  <text class="h" x="478" y="360">Interner Hyper-V-Switch</text>
+  <text class="t" x="504" y="390">192.168.50.0/24</text>
+
+  <rect class="box" x="70" y="505" rx="18" ry="18" width="290" height="105"/>
+  <text class="h" x="150" y="545">DC01</text>
+  <text class="t" x="105" y="575">AD DS · DNS · GPO</text>
+  <text class="s" x="132" y="598">192.168.50.10</text>
+
+  <rect class="box" x="455" y="505" rx="18" ry="18" width="290" height="105"/>
+  <text class="h" x="538" y="545">SRV01</text>
+  <text class="t" x="493" y="575">SMB · NTFS · DHCP</text>
+  <text class="s" x="518" y="598">192.168.50.20</text>
+
+  <rect class="box" x="840" y="505" rx="18" ry="18" width="290" height="105"/>
+  <text class="h" x="930" y="545">CL01</text>
+  <text class="t" x="885" y="575">Domänenclient · GPO</text>
+  <text class="s" x="905" y="598">192.168.50.30</text>
+
+  <path class="line" d="M330 196 H430"/>
+  <text class="label" x="356" y="181">NAT</text>
+  <path class="line" d="M200 255 V370 H430"/>
+  <text class="label" x="220" y="349">virtuelles Netz</text>
+  <path class="line" d="M520 420 L260 505"/>
+  <path class="line" d="M580 420 V505"/>
+  <path class="line" d="M640 420 L960 505"/>
+
+  <rect class="box" x="785" y="145" rx="16" ry="16" width="345" height="160"/>
+  <text class="h" x="825" y="185">Gemeinsamer Kontext</text>
+  <text class="t" x="825" y="220">Domäne: corp.example</text>
+  <text class="t" x="825" y="250">DNS: DC01</text>
+  <text class="t" x="825" y="280">DHCP: SRV01</text>
+</svg>
